@@ -1,0 +1,15 @@
+Get test framework going
+
+------------------------------------------------------
+Reqs:
+
+5. Add main menu
+ - Groups on/off
+
+7. Mobile UI
+
+
+
+A. Sunrise and sunset on clock
+
+

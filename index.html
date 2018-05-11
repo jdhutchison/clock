@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>World Clock</title>
+
+    <style type="text/css">
+      body {
+        background: black;
+        color: white;
+        font-family: 'Avenir', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      h1 {
+        display: grid;
+      }
+      #overlay {
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.75);
+        z-index: 2;
+      }
+
+      span.centered {
+        margin: auto;
+      }
+      .menu-closebutton {
+        position: absolute;
+        cursor: pointer;
+        width: 4rem;
+        height: 4rem;
+        left: 75%;
+        top: 3%;
+      }
+      .menu-closebutton:before, .menu-closebutton:after {
+        position: absolute;
+        width: 0.4rem;
+        height: 4rem;
+        background-color: #FFF;
+        content: ' ';
+      }
+      .menu-closebutton:before {
+        transform: rotate(45deg);
+      }
+      .menu-closebutton:after {
+        transform: rotate(-45deg);
+      }
+
+      .menu {
+        position: fixed;
+        z-index: 4;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        display: grid;
+        justify-content: center;
+      }
+      .menu-items {
+        margin: auto;
+      }
+      .menuitem {
+        font-size: 3rem;
+        cursor: pointer;
+      }
+      .menuheading {
+        font-size: 3rem;
+      }
+      .menusubitem {
+        font-size: 2rem;
+        margin-left: 2rem;
+        cursor: pointer;
+      }
+      input[type=text] {
+        border: 0px;
+        border-bottom: 1px solid white;
+        background-color: black;
+        color: white;
+        width: 100%;
+        display: block;
+        font-size: 2.5rem;
+        margin-bottom: 2vh;
+      }
+      #options {
+        text-align: center;
+      }
+
+      #cancelbutton {
+        cursor: pointer;
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem;
+        display: inline-block;
+      }
+      #cancelbutton:before, #cancelbutton:after {
+        position: absolute;
+        width: 0.5rem;
+        height: 4rem;
+        background-color: darkred;
+        content: ' ';
+      }
+      #cancelbutton:before {
+        transform: rotate(45deg);
+      }
+      #cancelbutton:after {
+        transform: rotate(-45deg);
+      }
+      #okbutton {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+        border: 0.5rem solid darkgreen;
+        cursor: pointer;
+        margin: 1rem;
+        display: inline-block;
+      }
+      @media screen and (max-width: 500px){
+        .menu-closebutton {
+          left: 0;
+          top: 0;
+        }
+
+        .menu-items {
+          margin: auto;
+          margin-left: 5vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+  <h1><span class="centered">World Clock & Timezone data</span></h1>
+    <div id="app">
+    </div>
+    <div id="overlay"></div>
+  </body>
+</html>
